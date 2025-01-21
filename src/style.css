@@ -1,0 +1,195 @@
+/* Overall App Styling */
+.app {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background: url('todo-task.png') no-repeat center center/cover; /* Background image */
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+/* Home Section */
+.home {
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.85); /* Light, subtle background */
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Task Form Section */
+.task-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.task-input {
+  width: 300px;
+  padding: 12px;
+  margin-right: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.task-input:focus {
+  border-color: #80c3ff; /* Soft blue when focused */
+}
+
+.add-task-button {
+  padding: 12px 25px;
+  background-color: #4CAF50; /* Fresh green */
+  color: white;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.add-task-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Task Sections */
+.task-sections {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  gap: 40px; /* Adds space between the task sections */
+}
+
+.task-section {
+  width: 30%;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  background: #f4f9fb; /* Light blue-grey background */
+  color: #333; /* Dark text for contrast */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 250px;
+}
+
+.task-section h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Task List Styling */
+.task-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.task-section li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #eef4f9; /* Soft light background for tasks */
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.task-section li:hover {
+  background-color: #d8e4f1; /* Darken slightly on hover */
+}
+
+/* Task Text Styling */
+.task-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-right: 15px; /* Adds space between the task text and dropdown */
+}
+
+/* Styling the dropdown (select) */
+.task-move-dropdown {
+  padding: 10px 15px;
+  background-color: #f0f8ff; /* Soft light blue background */
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  width: 160px;
+  margin-top: 10px; /* Adds gap between task text and dropdown */
+}
+
+/* Hover effect for the dropdown */
+.task-move-dropdown:hover {
+  background-color: #bde0fe; /* Light blue background on hover */
+  border-color: #80c3ff; /* Change border color to blue */
+}
+
+/* Focus effect for the dropdown */
+.task-move-dropdown:focus {
+  border-color: #5fa3e8; /* Soft blue when focused */
+  box-shadow: 0 0 5px rgba(95, 163, 232, 0.5); /* Adds a subtle glow effect */
+}
+
+/* Styling the options inside the dropdown */
+.task-move-dropdown option {
+  background-color: #f9f9f9;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Add a gradient effect for the dropdown options */
+.task-move-dropdown option:nth-child(odd) {
+  background-color: #e9f7fe; /* Light gradient for odd items */
+}
+
+.task-move-dropdown option:nth-child(even) {
+  background-color: #d0efff; /* Soft gradient for even items */
+}
+
+/* Hover effect on options in the dropdown */
+.task-move-dropdown option:hover {
+  background-color: #a2d8ff; /* Darker blue when hovering over option */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .task-sections {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .task-section {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+
+  .task-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .task-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .add-task-button {
+    width: 100%;
+  }
+}
